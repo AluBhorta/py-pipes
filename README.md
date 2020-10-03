@@ -1,3 +1,3 @@
-# Multi-Piper
+# Py Pipes
 
 Project demonstrating IPC using OS Pipes.
