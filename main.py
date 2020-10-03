@@ -55,11 +55,6 @@ def main(num_of_workers=3, length=10, sleep_for_secs=1):
     for r in readers:
         r.join()
     
-    for r in readers:
-        r.join()
-
-    Thread()
-    
     for w in workers:
         w["pipes"][0].close()
         w["process"].join()
@@ -70,7 +65,7 @@ def main(num_of_workers=3, length=10, sleep_for_secs=1):
 if __name__ == '__main__':
     num_of_workers = int(input("Enter number of workers (int): "))
     length = int(input("Enter length of work i.e. how long to work (int): "))
-    sleep_for_secs = float(input("Enter sleep interval for each worker (float): "))
+    sleep_for_secs = float(input("Enter sleep interval in seconds for each worker (float): "))
 
     main(num_of_workers, length, sleep_for_secs)
     
